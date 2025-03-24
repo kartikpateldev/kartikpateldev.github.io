@@ -16,7 +16,7 @@
 	<meta property="og:image" content="https://kartikpatel.dev/kartik-trapti-wedding/images/thumbnail.jpg" />
 	<meta property="og:image:width" content="300" />
 	<meta property="og:image:height" content="300" />
-	<meta property="og:url" content="https://kartikpatel.dev/kartik-trapti-wedding/" />
+	<meta property="og:url" content="https://kartikpatel.dev/shubh_vivah/" />
 	<meta property="og:site_name" content="Kartik & Trapti's Wedding" />
 	<meta property="og:type" content="website" />
 	<meta property="twitter:card" content="summary_large_image" />
@@ -126,29 +126,11 @@
 				</div>
 				<div class="col-xs-10 text-right menu-1">
 					<ul>
-						<li class="active"><a href="#" data-animate-effect="fadeIn">Home</a></li>
-						<li><a href="#fh5co-couple" data-animate-effect="fadeIn">About Us</a></li>
-						<!-- <li class="has-dropdown">
-							<a href="services.html" data-animate-effect="fadeIn">Services</a>
-							<ul class="dropdown">
-								<li><a href="#" data-animate-effect="fadeInLeft">Web Design</a></li>
-								<li><a href="#" data-animate-effect="fadeInLeft">eCommerce</a></li>
-								<li><a href="#" data-animate-effect="fadeInLeft">Branding</a></li>
-								<li><a href="#" data-animate-effect="fadeInLeft">API</a></li>
-							</ul>
-						</li>
-						<li class="has-dropdown">
-							<a href="gallery.html" data-animate-effect="fadeIn">Gallery</a>
-							<ul class="dropdown">
-								<li><a href="#" data-animate-effect="fadeInLeft">HTML5</a></li>
-								<li><a href="#" data-animate-effect="fadeInLeft">CSS3</a></li>
-								<li><a href="#" data-animate-effect="fadeInLeft">Sass</a></li>
-								<li><a href="#" data-animate-effect="fadeInLeft">jQuery</a></li>
-							</ul>
-						</li> -->
-						<li><a href="#fh5co-event" data-animate-effect="fadeIn">Events</a></li>
-						<li><a href="#fh5co-gallery" data-animate-effect="fadeIn">Family</a></li>
-						<li><a href="#attendanceForm" data-animate-effect="fadeIn">RSVP</a></li>
+						<li class="active"><a href="#" onclick="closeMenu(event)">Home</a></li>
+						<li><a href="#fh5co-couple" onclick="closeMenu(event)">About Us</a></li>
+						<li><a href="#fh5co-event" onclick="closeMenu(event)">Events</a></li>
+						<li><a href="#fh5co-gallery" onclick="closeMenu(event)">Family</a></li>
+						<li><a href="#attendanceForm" onclick="closeMenu(event)">RSVP</a></li>
 					</ul>
 				</div>
 			</div>
@@ -156,7 +138,7 @@
 		</div>
 	</nav>
 
-	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg);">
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg);  position: relative;">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -166,7 +148,14 @@
 							<h1>Kartik &amp; Trapti</h1>
 							<h2>We Are Getting Married</h2>
 							<div class="simply-countdown simply-countdown-one"></div>
-							<p><a href="#" class="btn btn-default btn-sm" onclick="addToCalendar(event)">Save the date</a></p>
+							<p>
+								<a href="#" class="btn btn-default btn-sm" onclick="addToCalendar(event)">Save the date</a>
+							</p>
+							<!-- <p>
+								<a href="#fh5co-couple" class="btn btn-default btn-sm" onclick="scrollToNextSection(event)">
+									<i class="icon-arrow-down"></i>
+								</a>
+							</p> -->
 							<script>
 							function addToCalendar(e) {
 								e.preventDefault();
@@ -200,6 +189,13 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		<div style="position: absolute; bottom: 20px; left: 0; right: 0; text-align: center;">
+			<p>
+				<a href="#fh5co-couple" class="btn btn-default btn-sm" style="color: #F14E95; onclick="scrollToNextSection(event)">
+					<i class="icon-arrow-down"></i>
+				</a>
+			</p>
 		</div>
 	</header>
 
@@ -889,6 +885,27 @@ async function handleAttendance(event) {
 
 	<!-- Add notification container at the end of body -->
 	<div id="notification" class="notification"></div>
+
+	<script>
+	function closeMenu(event) {
+		// Remove offcanvas class to close mobile menu
+		document.body.classList.remove('offcanvas');
+		
+		// Small delay to allow menu to close before scrolling
+		setTimeout(() => {
+			// Get target section from clicked link's href
+			const targetId = event.target.getAttribute('href');
+			if (targetId !== '#') {
+				const targetSection = document.querySelector(targetId);
+				if (targetSection) {
+					targetSection.scrollIntoView({ behavior: 'smooth' });
+				}
+			}
+		}, 300);
+		
+		event.preventDefault();
+	}
+	</script>
 
 	</body>
 </html>
