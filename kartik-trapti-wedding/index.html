@@ -14,7 +14,7 @@
 	<meta property="og:title" content="Kartik & Trapti's Wedding" />
 	<meta property="og:description" content="Join us in celebrating the wedding of Kartik and Trapti" />
 	<meta property="og:image" content="https://kartikpatel.dev/kartik-trapti-wedding/images/img_bg_2.jpg" />
-	<meta property="og:image:width" content="400" />
+	<meta property="og:image:width" content="300" />
 	<meta property="og:image:height" content="300" />
 	<meta property="og:url" content="https://kartikpatel.dev/kartik-trapti-wedding/" />
 	<meta property="og:site_name" content="Kartik & Trapti's Wedding" />
@@ -29,6 +29,34 @@
 	<style>
 		html {
 			scroll-behavior: smooth;
+		}
+
+		/* Add new notification styles */
+		.notification {
+			position: fixed;
+			top: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: #333;
+			color: white;
+			padding: 15px 25px;
+			border-radius: 5px;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+			z-index: 1000;
+			opacity: 0;
+			transition: opacity 0.3s ease-in-out;
+		}
+
+		.notification.success {
+			background-color: #4CAF50;
+		}
+
+		.notification.error {
+			background-color: #f44336;
+		}
+
+		.notification.show {
+			opacity: 1;
 		}
 	</style>
 
@@ -94,11 +122,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-2">
-					<div id="fh5co-logo"><a href="index.html">#Traptik<strong>.</strong></a></div>
+					<div id="fh5co-logo"><a href="#">#Traptik<strong>.</strong></a></div>
 				</div>
 				<div class="col-xs-10 text-right menu-1">
 					<ul>
-						<li class="active"><a href="index.html" data-animate-effect="fadeIn">Home</a></li>
+						<li class="active"><a href="#" data-animate-effect="fadeIn">Home</a></li>
 						<li><a href="#fh5co-couple" data-animate-effect="fadeIn">About Us</a></li>
 						<!-- <li class="has-dropdown">
 							<a href="services.html" data-animate-effect="fadeIn">Services</a>
@@ -120,6 +148,7 @@
 						</li> -->
 						<li><a href="#fh5co-event" data-animate-effect="fadeIn">Events</a></li>
 						<li><a href="#fh5co-gallery" data-animate-effect="fadeIn">Family</a></li>
+						<li><a href="#attendanceForm" data-animate-effect="fadeIn">RSVP</a></li>
 					</ul>
 				</div>
 			</div>
@@ -804,6 +833,23 @@
 </script>
 
 <script>
+function showNotification(message, type = 'success') {
+    const notification = document.getElementById('notification');
+    notification.textContent = message;
+    notification.className = `notification ${type}`;
+    
+    // Force reflow
+    notification.offsetHeight;
+    
+    // Show notification
+    notification.classList.add('show');
+    
+    // Hide after 3 seconds
+    setTimeout(() => {
+        notification.classList.remove('show');
+    }, 3000);
+}
+
 async function handleAttendance(event) {
     event.preventDefault();
     
@@ -811,7 +857,7 @@ async function handleAttendance(event) {
     const submitBtn = document.getElementById('submitBtn');
     
     if (!name) {
-        alert('Please enter your name');
+        showNotification('Please enter your name', 'error');
         return;
     }
 
@@ -829,10 +875,10 @@ async function handleAttendance(event) {
 
         // Clear form and show confirmation
         document.getElementById('name').value = '';
-        alert('Thank you for confirming your attendance!');
+        showNotification('Thank you for confirming your attendance!', 'success');
     } catch (error) {
         console.error('Error:', error);
-        alert('Sorry, there was an error submitting your response. Please try again.');
+        showNotification('Sorry, there was an error submitting your response. Please try again.', 'error');
     } finally {
         // Re-enable button
         submitBtn.disabled = false;
@@ -840,6 +886,9 @@ async function handleAttendance(event) {
     }
 }
 </script>
+
+	<!-- Add notification container at the end of body -->
+	<div id="notification" class="notification"></div>
 
 	</body>
 </html>
