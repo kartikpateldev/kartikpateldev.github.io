@@ -4,7 +4,7 @@
     "details": [
       {
         "appID": "YOUR_TEAM_ID.com.kp.kartik.aarti",
-        "paths": ["/playlist*"]
+        "paths": ["/aarti/playlist*"]
       }
     ]
   }

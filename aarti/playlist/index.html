@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aarti Sangrah - Shared Playlist</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Aarti Sangrah - Shared Playlist">
+    <meta property="og:description" content="Check out this beautiful Aarti playlist!">
+    
+    <script type="text/javascript">
+        window.onload = function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            const playStoreLink = "https://play.google.com/store/apps/details?id=com.kp.kartik.aarti";
+            const appStoreLink = "https://apps.apple.com/app/idYOUR_APP_ID";
+
+            if (/android/i.test(userAgent)) {
+                window.location.replace(playStoreLink);
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.replace(appStoreLink);
+            } else {
+                document.getElementById('message').innerHTML = "<h1>Aarti Sangrah</h1><p>Please open this link on your mobile phone to view the playlist!</p>";
+            }
+        };
+    </script>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0;
+            background-color: #FFF9F2;
+            color: #8D4B08;
+            text-align: center; 
+        }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #E07A2E;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 2s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <div id="message">
+        <div class="loader"></div>
+        <p>Redirecting you to the App Store...</p>
+    </div>
+</body>
+</html>
