@@ -1,5 +1,5 @@
 # 💫 About Me:
-Senior Software Engineer (Backend / Mobile Developer)
+Senior Software Engineer with 8+ years of experience building scalable products across FinTech, Algo-Trading, Retail & Supply Chain, Defence, HRMS, E-commerce, and Logistics.
 
 
 ## 🌐 Socials:
