@@ -1,0 +1,74 @@
+[
+    {
+        "id": "in.sudogrep.ghosttrap",
+        "name": "Ghost Trap: Reveal the World",
+        "icon": "",
+        "category": "Arcade",
+        "shortDescription": "Claim territory, dodge or trap ghosts, reveal world landmarks in arcade puzzle!",
+        "fullDescription": "Claim territory, outsmart ghosts, and reveal stunning world landmarks in Ghost Trap – a tactical arcade puzzle game that challenges your spatial strategy and quick thinking. Navigate Champ across the grid, carving paths to claim territory while avoiding bouncing ghosts. Claim 80%+ of each level to reveal breathtaking images of famous landmarks from around the world.",
+        "downloads": "50+",
+        "rating": "5.0",
+        "reviews": "2",
+        "screenshots": []
+    },
+    {
+        "id": "dev.kartikpatel.fileforge",
+        "name": "File Forge: Convert & Extract",
+        "icon": "",
+        "category": "Tools",
+        "shortDescription": "Convert, compress & edit media files! Extract metadata, text, PDFs & scan QR.",
+        "fullDescription": "Meet File Forge, your ultimate all-in-one utility app for handling files effortlessly! Whether you need to convert formats, compress file sizes, extract important metadata, or perform advanced document and media editing, File Forge is the only tool you need. Features include universal file conversion, compression, image & video editing, PDF utilities, OCR text extraction, translation, metadata viewer & editor, and QR/barcode scanner.",
+        "downloads": "100+",
+        "rating": "5.0",
+        "reviews": "3",
+        "screenshots": []
+    },
+    {
+        "id": "com.sudogrep.vapefree.vape_free",
+        "name": "VapeQuit: Quit Vaping & Smoke",
+        "icon": "",
+        "category": "Health & Fitness",
+        "shortDescription": "Quit vaping & nicotine habits. Track clean time, money saved & beat cravings.",
+        "fullDescription": "Take control of your health and break free from vaping and nicotine habits with VapeQuit. Features include real-time clean duration counter, savings & pod counter calculator, 3-minute panic craving buster with guided breathing exercises, medical health recovery milestones, and 100% private offline-first data storage.",
+        "downloads": "5+",
+        "rating": "5.0",
+        "reviews": "1",
+        "screenshots": []
+    },
+    {
+        "id": "com.kp.kartik.aarti",
+        "name": "Aarti Sangrah: Daily Prayers",
+        "icon": "",
+        "category": "Lifestyle",
+        "shortDescription": "300+ Aartis, Mantras, Stotrams & festival collections for your daily worship.",
+        "fullDescription": "Aarti Sangrah is a comprehensive Hindu devotional app designed to bring over 300 sacred prayers, Aartis, Chalisas, Mantras, and Stotrams directly to your smartphone. Features include festival highlights, custom Pooja playlists, multi-language support (13 Indian languages), categorized by deity & festival, customizable reading experience, audio Aarti support, and offline reading with sync.",
+        "downloads": "100+",
+        "rating": "4.8",
+        "reviews": "12",
+        "screenshots": []
+    },
+    {
+        "id": "com.sudogrep.citizenprep",
+        "name": "CitizenPrep",
+        "icon": "",
+        "category": "Education",
+        "shortDescription": "Prepare for your citizenship test with practice questions and progress tracking.",
+        "fullDescription": "Prepare smarter for your U.S. Citizenship Test with CitizenPrep! Practice civics and history test questions covering government structure, rights and responsibilities, American history, and integrated civics. Features include practice at your own pace, progress tracking, instant score calculation, and offline access with guest mode.",
+        "downloads": "0+",
+        "rating": "-",
+        "reviews": "0",
+        "screenshots": []
+    },
+    {
+        "id": "com.billreminder.bill_reminder",
+        "name": "BillBuddy - Bills & Budget",
+        "icon": "",
+        "category": "Finance",
+        "shortDescription": "Track bills, manage budgets, split expenses & understand spending.",
+        "fullDescription": "Stay on top of bills, manage your budget, understand your spending, and keep shared money organized — all in one place. Features include bill organization with reminders, calendar view for due dates, monthly budget management, spending insights with charts, recurring payment tracking, split shared expenses, borrow & lend tracking, multi-currency support, and export/import capabilities.",
+        "downloads": "10+",
+        "rating": "5.0",
+        "reviews": "2",
+        "screenshots": []
+    }
+]
