@@ -6,6 +6,14 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
 })
 
+// Set skill level bar widths based on data-level attribute
+document.querySelectorAll('.level-bar-inner').forEach(function(bar) {
+    var level = bar.getAttribute('data-level');
+    if (level) {
+        bar.style.width = level;
+    }
+});
+
 
 /* Vanilla RSS - https://github.com/sdepold/vanilla-rss */
 
